@@ -4,3 +4,55 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+    --font-weight-card-title: 700;
+    --font-weight-card-text: 400;
+    --themes-background-color: #FFFFFF;
+    --themes-main-color: #000000;
+    --text-stroke-color: #FFFFFF;
+    --button-difference-color: #FFFFFF;
+    --background-gradient-main: #d3d3d3;
+    --background-gradient-additional-from: #e7e7e7;
+    --background-gradient-additional-to: #1a1a1a;
+    --background:
+    repeating-linear-gradient(90deg, var(--background-gradient-main), var(--background-gradient-main) 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(180deg, var(--background-gradient-main), var(--background-gradient-main) 2px, transparent 2px, transparent 4px),
+    linear-gradient(180deg, var(--background-gradient-additional-from) 0.01%, var(--background-gradient-additional-to));
+}
+
+:root.theme-dark {
+    --font-weight-card-title: 785;
+    --font-weight-card-text: 465;
+    --themes-background-color: #000000;
+    --themes-main-color: #00CC14;
+    --text-stroke-color: #000000;
+    --button-difference-color: #00CC14;
+    --background-gradient-main: #000000;
+    --background-gradient-additional-from: #007f0c;
+    --background-gradient-additional-to: #004306;
+    --background: 
+    repeating-linear-gradient(90deg, var(--background-gradient-main), var(--background-gradient-main) 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(180deg, var(--background-gradient-main), var(--background-gradient-main) 2px, transparent 2px, transparent 4px),
+    linear-gradient(180deg, var(--background-gradient-additional-from), var(--background-gradient-additional-to));
+}
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --font-weight-card-title: 785;
+        --font-weight-card-text: 465;
+        --themes-background-color: #000000;
+        --themes-main-color: #00CC14;
+        --text-stroke-color: #000000;
+        --button-difference-color: #00CC14;
+        --background-gradient-main: #000000;
+        --background-gradient-additional-from: #007f0c;
+        --background-gradient-additional-to: #004306;
+        --background: 
+        repeating-linear-gradient(90deg, var(--background-gradient-main), var(--background-gradient-main) 2px, transparent 2px, transparent 4px),
+        repeating-linear-gradient(180deg, var(--background-gradient-main), var(--background-gradient-main) 2px, transparent 2px, transparent 4px),
+        linear-gradient(180deg, var(--background-gradient-additional-from), var(--background-gradient-additional-to));
+    }
+
+}
