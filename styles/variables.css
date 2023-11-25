@@ -4,7 +4,7 @@
     --main-font: 'Inter-Variable', sans-serif;
     --font-weight-card-title: 700;
     --font-weight-card-text: 400;
-    --accent-font: 'Press Start 2P', sans-serif;
+    --accent-font: 'PressStart2P', sans-serif;
     --font-size-s: 0.875rem;
     --font-size-m: 1.125rem;
     --themes-background-color: #FFFFFF;
@@ -19,5 +19,4 @@
         repeating-linear-gradient(90deg, var(--background-gradient-main), var(--background-gradient-main) 2px, transparent 2px, transparent 4px),
         repeating-linear-gradient(180deg, var(--background-gradient-main), var(--background-gradient-main) 2px, transparent 2px, transparent 4px),
         linear-gradient(180deg, var(--background-gradient-additional-from) 0.01%, var(--background-gradient-additional-to));
-
 }

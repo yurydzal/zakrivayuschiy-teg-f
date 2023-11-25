@@ -55,6 +55,12 @@
   line-height: normal;
   color: var(--themes-main-color);
   margin-block-end: 20px;
+  text-decoration: none;
+  cursor: default;
+}
+
+header__title:focus {
+  outline: none;
 }
 
 .header__description {
@@ -81,6 +87,7 @@
 }
 
 .theme-menu__button {
+  position: relative;
   text-transform: uppercase;
   border: none;
   background: transparent;
@@ -121,7 +128,8 @@
 .theme-menu__button:disabled::before {
   content: '▶';
   position: absolute;
-  margin-inline-start: -20px;
+  top: 0;
+  left: 5px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -174,6 +182,7 @@
 
 .card__image-container {
   display: grid;
+  position: relative;
   aspect-ratio: 1;
   border-block: 2px solid var(--themes-main-color);
 }
@@ -187,6 +196,8 @@
 
 .card__image-label {
   position: absolute;
+  top: 0;
+  right: 0;
   justify-self: end;
   font-family: var(--accent-font);
   font-size: var(--font-size-s);
@@ -293,7 +304,7 @@
   justify-content: center;
   align-items: center;
   inline-size: 130px;
-  block-size: 38px;
+  min-height: 38px;
 }
 
 .button__text {
@@ -322,6 +333,11 @@
 }
 
 .icon-floppy {
+  block-size: 39px;
+  inline-size: 39px;
+}
+
+.button__color-fill > .icon-floppy {
   block-size: 21px;
   inline-size: 21px;
   color: var(--button-difference-color);
@@ -339,8 +355,7 @@
 }
 
 .dialog__popup-container::backdrop {
-  background-color: rgb(0 0 0 / 0.3);
-  backdrop-filter: blur(7px);
+  background-color: rgb(0 0 0 / 0.75);
 }
 
 .dialog__popup-container:is([open]) {
@@ -372,6 +387,10 @@
   color: var(--themes-main-color);
 }
 
+.dialog__form {
+  display: contents;
+}
+
 .dialog-button__close {
   grid-area: C;
   margin-block-start: 10px;
@@ -381,35 +400,35 @@
   color: var(--themes-main-color);
 }
 
-.sprint-zero {
+.filter-brightness {
   filter: brightness(150%);
 }
 
-.sprint-one-one {
+.filter-sepia {
   filter: sepia(80%);
 }
 
-.sprint-one-two {
+.filter-hue-rotate {
   filter: hue-rotate(-90deg);
 }
 
-.sprint-two-one {
+.filter-contrast {
   filter: contrast(50%);
 }
 
-.sprint-two-two {
+.filter-blur {
   filter: blur(0.5rem);
 }
 
-.sprint-three-one {
+.filter-opacity {
   filter: opacity(0.6);
 }
 
-.sprint-three-two {
+.filter-saturate {
   filter: saturate(15%);
 }
 
-.sprint-four {
+.filter-grayscale_invert {
   filter: grayscale(0.9) invert(0.7);
 }
 
@@ -421,7 +440,7 @@
     padding-inline: 20px;
   }
 
-  .icon-floppy {
+  .button__color-fill > .icon-floppy {
     block-size: 28px;
     inline-size: 28px;
   }
