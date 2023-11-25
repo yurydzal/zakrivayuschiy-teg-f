@@ -270,11 +270,6 @@
   transition: border 0.3s;
 }
 
-.like-icon {
-  inline-size: 39px;
-  block-size: 36px;
-}
-
 .card__icon-button:focus {
   outline: none;
 }
@@ -284,6 +279,8 @@
 }
 
 .like-icon {
+  inline-size: 39px;
+  block-size: 36px;
   width: fit-content;
 }
 
@@ -413,8 +410,7 @@
 }
 
 .sprint-four {
-  filter: grayscale(0.9);
-  filter: invert(0.7);
+  filter: grayscale(0.9) invert(0.7);
 }
 
 @media (width <= 375px) {
