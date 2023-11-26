@@ -47,6 +47,7 @@
 
 .like-icon:hover .main-body {
     transition-delay: 0.05s;
+    transition: fill 0.3s linear;
 }
 
 .like-icon:active .core,
